@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>vue ajax</title>
+</head>
+<body>
+	<h1>API CALL TEST with Vue.JS</h1>
+	<div id="app">
+		<div>
+			<table>
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>名前</th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="product: ${pro}">
+						<td th:text="${product.id}"></td>
+						<td th:text="${product.name}"></td>
+						<td><a th:href="@{/products/{id}/edit(id=${product.id})}">編集</a></td>
+						<td>
+							<form th:method="delete" th:action="@{/products/{id}(id=${product.id})}">
+								<input type="submit" value="削除" />
+							</form>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="main.js">
+
+	</script>
+</body>
+</html>
