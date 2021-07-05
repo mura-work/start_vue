@@ -14,4 +14,9 @@ public class IndexController {
 	public String transition(){
 		return "transition";
 	}
+	
+	@GetMapping("/template")
+	public String template() {
+		return "template";
+	}
 }
