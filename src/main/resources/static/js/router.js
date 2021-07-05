@@ -13,7 +13,7 @@ const ROUTER = new VueRouter({
 			alias: '/back'
 		},
 		{
-			path: '/users/:userId',
+			path: '/users',
 			name: 'user',
 			component: USER,
 			children: [

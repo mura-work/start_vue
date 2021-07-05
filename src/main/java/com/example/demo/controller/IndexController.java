@@ -9,4 +9,9 @@ public class IndexController {
 	public String index() {
 		return "index";
 	}
+	
+	@GetMapping("/transition")
+	public String transition(){
+		return "transition";
+	}
 }
