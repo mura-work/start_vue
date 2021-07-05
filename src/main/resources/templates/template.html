@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	[v-cloak] {
+		display: none
+	}
+</style>
+</head>
+<body>
+	<div id="app" v-cloak>
+		<div v-text="message"></div>
+		<p>
+			{{ text | readMore(20, '...')}}
+			{{ text | readMore(5, '...')}}
+		</p>
+		<a v-bind:href="url">Link</a>
+		<a :href="url">Link</a>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="js/template.js"></script>
+</body>
+</html>
