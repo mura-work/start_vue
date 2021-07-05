@@ -2,16 +2,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 <title>start_vue</title>
 </head>
 <body>
 	<h1>Vueの勉強</h1>
 	<div id="app">
 		<router-link to="/index">Top</router-link>
-		<router-link :to="{name: 'user', params: {userId: 123}}">Users</router-link>
-		<router-link to="/users/123/posts">posts</router-link>
-		<router-link to="/goTop">トップに戻る</router-link>
-		<router-link to="/back">Topにエイリアス</router-link>
+		<router-link to="/users">Users</router-link>
 		<router-view></router-view>
 	</div>
 
@@ -20,5 +20,6 @@
 	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/router.js"></script>
+	<script src="js/genreList.js"></script>
 </body>
 </html>
