@@ -6,13 +6,17 @@
 </head>
 <body>
 	<div id="app">
-		<p>
-			base price: <input type="text" v-model="basePrice" />
-		</p>
+		<ul>
+			<li>{{ computedNumber }}</li>
+			<li>{{ computedNumber }}</li>
+			<li>{{ computedNumber }}</li>
+		</ul>
 		
-		<p>
-			tax included price: <input type="text" v-model="taxIncludedPrice" />
-		</p>
+		<ul>
+			<li>{{ methodsNumber() }}</li>
+			<li>{{ methodsNumber() }}</li>
+			<li>{{ methodsNumber() }}</li>
+		</ul>
 	</div>
 	
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
