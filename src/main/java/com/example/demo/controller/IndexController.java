@@ -19,4 +19,9 @@ public class IndexController {
 	public String template() {
 		return "template";
 	}
+	
+	@GetMapping("/property")
+	public String property() {
+		return "property";
+	}
 }
