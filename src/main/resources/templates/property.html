@@ -7,13 +7,11 @@
 <body>
 	<div id="app">
 		<p>
-			{{ message.split('').reverse().join('') }}
+			base price: <input type="text" v-model="basePrice" />
 		</p>
+		
 		<p>
-			{{ reversedMessage }}
-		</p>
-		<p>
-			{{ reverseMethod() }}
+			tax included price: <input type="text" v-model="taxIncludedPrice" />
 		</p>
 	</div>
 	
