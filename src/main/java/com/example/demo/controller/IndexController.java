@@ -24,4 +24,9 @@ public class IndexController {
 	public String property() {
 		return "property";
 	}
+	
+	@GetMapping("/bit")
+	public String bitcoin() {
+		return "bitcoin";
+	}
 }
