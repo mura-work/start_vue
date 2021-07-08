@@ -29,4 +29,9 @@ public class IndexController {
 	public String bitcoin() {
 		return "bitcoin";
 	}
+	
+	@GetMapping("/watch")
+	public String watch() {
+		return "watch";
+	}
 }
