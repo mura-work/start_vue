@@ -1,16 +1,20 @@
 const app = new Vue({
 	el: '#app',
 	data: {
-		lastName: "",
-		firstName: "",
-		fullName: "",
+		colors: [
+			{name: "red"},
+			{name: "blue"},
+			{name: "white"},
+		],
 	},
 	watch: {
-		firstName: function(){
-			this.fullName = this.lastName + this.firstName
-		},
-		lastName: function(value){
-			this.fullName = this.lastName + this.firstName
+		colors: {
+			handler: function (newValue, oldValue){
+				console.log('u');
+				console.log(newValue);
+				console.log(newValue);
+			},
+			deep: false
 		}
-	},
+	}
 })
