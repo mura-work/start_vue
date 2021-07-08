@@ -12,16 +12,13 @@
 <body>
 	<div id="app" v-cloak>
 		<div>
-			<label>km</label>
-			<input type="text" v-model="rangeKm" />
+			<input type="text" v-model="lastName" />
 		</div>
 		<div>
-			<label>m</label>
-			<input type="text" v-model="rangeM" />
+			<input type="text" v-model="firstName" />
 		</div>
 		<div>
-			<label>mm</label>
-			<input type="text" v-model="rangeMm" />
+			fullName: {{ fullName }}
 		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

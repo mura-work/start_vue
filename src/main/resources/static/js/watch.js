@@ -1,22 +1,16 @@
 const app = new Vue({
 	el: '#app',
 	data: {
-		rangeKm: '',
-		rangeM: '',
-		rangeMm: '',
+		lastName: "",
+		firstName: "",
+		fullName: "",
 	},
 	watch: {
-		rangeKm: function(value){
-			this.rangeM = value * 1000
-			this.rangeMm = value * 1000000
+		firstName: function(){
+			this.fullName = this.lastName + this.firstName
 		},
-		rangeM: function(value){
-			this.rangeKm = value / 1000
-			this.rangeMm = value * 1000
-		},
-		rangeMm: function(value){
-			this.rangeM = value / 1000
-			this.rangeKm = value / 1000000
+		lastName: function(value){
+			this.fullName = this.lastName + this.firstName
 		}
-	}
+	},
 })
