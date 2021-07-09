@@ -34,4 +34,9 @@ public class IndexController {
 	public String watch() {
 		return "watch";
 	}
+	
+	@GetMapping("/json")
+	public String json() {
+		return "json";
+	}
 }
