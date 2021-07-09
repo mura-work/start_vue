@@ -5,14 +5,23 @@ const app = new Vue({
 		keyword: '',
 		message: '',
 	},
+	watch: {
+		keyword: function(newKeyword, oldKeyword){
+			// console.log(newKeyword, oldKeyword)
+			this.message = 'waiting,,,'
+			this.debouncedGetAnswer()
+		}
+	},
 	created: function(){
-		this.keyword = 'JavaScript'
-		this.getAnswer()
+		// this.keyword = 'JavaScript'
+		// this.getAnswer()
+		this.debouncedGetAnswer = _.debounce(this.getAnswer, 1000)
 	},
 	methods: {
 		getAnswer: function(){
 			if(this.keyword === ''){
-				this.item = null
+				this.items = null
+				this.message = ''
 				return
 			}
 			
