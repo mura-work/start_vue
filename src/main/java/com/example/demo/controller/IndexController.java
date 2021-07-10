@@ -39,4 +39,9 @@ public class IndexController {
 	public String json() {
 		return "json";
 	}
+	
+	@GetMapping("/bind")
+	public String bind() {
+		return "bind";
+	}
 }
