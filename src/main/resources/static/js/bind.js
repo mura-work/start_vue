@@ -1,7 +1,9 @@
 const app = new Vue({
 	el: '#app',
 	data: {
-		isLarge: true,
-		hasError: true,
+		classObject: {
+			large: true,
+			'text-danger': true,
+		}
 	}
 })
